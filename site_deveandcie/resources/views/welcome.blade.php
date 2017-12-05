@@ -1,95 +1,50 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+</head>
+<body>
+    <main class="container">
+        <div class="row justify-content-between">
+            <div class="col-5" id="blocleft">
+                <form id="formupload" method="post" action="">
+                    <div class="row justify-content-center">
+                        <input class="col-12" type="file" name="file_name">
+                    </div>
+                    <div class="row justify-content-center">
+                        <input class="col-12" type="text" name="exp_mail" placeholder="email expéditeur">
+                    </div>
+                    <div class="row justify-content-center">
+                        <input class="col-12" type="text" name="dest_mail" placeholder="email destinataire">
+                    </div>
+                    <div class="row justify-content-center">
+                        <textarea class="col-12" name="dest_message" placeholder="Message"></textarea>
+                    </div>
+                    <div class="row justify-content-center">
+                        <button id="btnup" type="button" class="btn btn-dark">Envoyer</button>
+                    </div>
 
-        <title>Laravel</title>
+                </form>
+            </div>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+            <div class="col-6" id="blocright">
+                <div class="row justify-content-center">
+                    <img src="http://via.placeholder.com/150x150" id="logo">
+                    <p>
+                        Blabla de présentation du service.
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris felis nisi, porta eu augue vitae, scelerisque ultricies velit. Vestibulum eu vehicula ante, cursus accumsan tellus. Etiam ut neque venenatis, auctor est ac, molestie felis. Vivamus vitae lorem nulla. Aenean in fringilla risus. Fusce bibendum vitae massa vitae porttitor. Mauris fringilla tortor ac erat ullamcorper, a malesuada justo auctor. Aenean sit amet neque varius, malesuada mauris sit amet, malesuada nisi.
+                    </p>
                 </div>
             </div>
         </div>
-    </body>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
 </html>
