@@ -10,7 +10,8 @@
     <main class="container">
         <div class="row justify-content-between">
             <div class="col-5" id="blocleft">
-                <form id="formupload" method="post" action="">
+                <form id="formupload" method="POST" action="{{ url('/') }}">
+                    {{ csrf_field() }}
                     <div class="row justify-content-center">
                         <input class="col-12" type="file" name="file_name">
                     </div>
@@ -24,7 +25,7 @@
                         <textarea class="col-12" name="dest_message" placeholder="Message"></textarea>
                     </div>
                     <div class="row justify-content-center">
-                        <button id="btnup" type="button" class="btn btn-dark">Envoyer</button>
+                        <button id="btnup" type="submit" class="btn btn-dark">Envoyer</button>
                     </div>
 
                 </form>

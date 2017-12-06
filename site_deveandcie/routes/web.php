@@ -16,3 +16,4 @@ Route::post('/', 'UploadController@send');
 Route::get('/confirmup', 'ConfirmController@upload');
 Route::get('/download', 'DownloadController@send');
 Route::get('/confirmdl', 'ConfirmController@download');
+
