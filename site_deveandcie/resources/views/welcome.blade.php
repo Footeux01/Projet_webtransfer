@@ -33,6 +33,7 @@
             <div class="col-6" id="blocright">
                 <div class="row justify-content-center">
                     <img src="http://via.placeholder.com/150x150" id="logo">
+                    
                     <p>
                         Blabla de présentation du service.
 

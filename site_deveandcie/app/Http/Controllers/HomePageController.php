@@ -10,8 +10,8 @@ class HomePageController extends Controller
     //
     public function index()
     {	
-    	$Transfer = transfers::find(1);
-    	return($Transfer->dest_message);
-    	//return view('welcome');
+    	$t = Transfers::find(1);
+    	return($t->dest_message);
+    	//return view('welcome',['test'=>'bidule']);
     }
 }
