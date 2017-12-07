@@ -24,8 +24,11 @@ class ConfirmController extends Controller
     {	
         $transfer = Transfers::find($id_transfer);
         //procéder au téléchargement du fichier
-        $fname = Storage::disk('upload')->get($transfer->file_name);
-        
+
+        return Storage::disk('upload')->download($transfer->file_name);
+
+        // 
+        // return $fname;
         //affichage du résultat
         return view('confirmdl');
     }

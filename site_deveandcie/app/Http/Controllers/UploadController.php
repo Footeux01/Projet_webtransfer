@@ -23,7 +23,7 @@ class UploadController extends Controller
 
         //Enregistre les informations dans la database
         $transfer->save();
-
+        
         //Envoi du mail avec le lien vers le fichier
         
         //return redirect()->route('confirmup',compact('transfer'));
