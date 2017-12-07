@@ -23,6 +23,8 @@ class UploadController extends Controller
         //Enregistrement le nom du fichier sélectionné
         $fname = Storage::disk('upload')->put('', $request->file_name);
 
+        $urldownload = Storage::disk('upload')->download($transfer->file_name);
+
         //Inscription du nom du fichier dans la database
         $transfer->file_name = $fname;
 
@@ -30,7 +32,7 @@ class UploadController extends Controller
         $transfer->save();
         
         //Envoi du mail avec le lien vers le fichier
-        Mail::to($destinataires)->send(new SendMail($request->except('csrf_token')));
+        Mail::to($destinataires)->send(new SendMail($request->except('csrf_token'),$realfilename));
 
         //return redirect()->route('confirmup',compact('transfer'));
     	return view('confirmup', compact('transfer'));

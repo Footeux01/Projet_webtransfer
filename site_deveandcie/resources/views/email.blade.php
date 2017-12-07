@@ -10,8 +10,8 @@
       <li><strong>Expéditeur</strong> : {{ $contact['exp_mail'] }}</li>
       <li><strong>Destinataire</strong> : {{ $contact['dest_mail'] }}</li>
       <li><strong>Message</strong> : {{ $contact['dest_message'] }}</li>
-      <li><strong>Nom du fichier</strong> : {{ $contact['file_name'] }}</li>
-      <li><strong>Lien de téléchargement</strong> : {{ $contact['file_name'] }}</li>
+      <li><strong>Nom du fichier</strong> : {{ $realname }}</li>
+      <li><strong>Lien de téléchargement</strong> : {{ $realname }}</li>
     </ul>
   </body>
 </html>

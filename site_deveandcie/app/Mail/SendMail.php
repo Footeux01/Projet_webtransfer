@@ -15,17 +15,19 @@ class SendMail extends Mailable
      * Elements de contact
      * @var array
      */
-    public $contact; 
+    public $contact;
+    public $realname; 
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Array $contact)
+    public function __construct(Array $contact,$realname)
     {
         //
         $this->contact = $contact;
+        $this->realname = $realname;
     }
 
     /**
