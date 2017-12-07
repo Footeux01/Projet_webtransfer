@@ -5,7 +5,7 @@
   </head>
   <body>
     <h2>Fichier téléchargé !</h2>
-    <p>Réception d'une prise de contact avec les éléments suivants :</p>
+    <p>Informations relatives au téléchargement de fichier :</p>
     <ul>
       <li><strong>Expéditeur</strong> : {{ $contact['exp_mail'] }}</li>
       <li><strong>Destinataire</strong> : {{ $contact['dest_mail'] }}</li>
