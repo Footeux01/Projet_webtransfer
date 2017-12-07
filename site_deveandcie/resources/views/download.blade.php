@@ -14,15 +14,15 @@
 					<p>Voici votre fichier à télécharger.</p>
 				</div>
 				<div id="dest_message" class="row justify-content-center">
-					<p>Ici doit se trouver le message laissé par l'expéditeur qui devra être importé depuis la BDD.</p>
+					<p>Ici doit se trouver le message laissé par l'expéditeur qui devra être importé depuis la BDD : {{$transfer->dest_message}}</p>
 				</div>
 				<div id="zonefilename" class="card">
 				  <div class="card-body">
-					nom du fichier à récupérer depuis la BDD
+					nom du fichier à récupérer depuis la BDD : {{$transfer->file_name}}
 				  </div>
 				</div>
 				<div class="row justify-content-center">
-					<button id="btndl" type="button" class="btn btn-dark">Télécharger</button>
+					<a href="{{route('confirmdl',['id_transfer'=>$transfer->id_transfer])}}"><button id="btndl" type="button" class="btn btn-dark">Télécharger</button></a>
 				</div>
 			</div>
 

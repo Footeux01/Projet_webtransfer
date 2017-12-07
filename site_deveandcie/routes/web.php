@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', 'HomePageController@index');
-Route::post('/', 'UploadController@send');
-Route::get('/confirmup', 'ConfirmController@upload');
-Route::get('/download', 'DownloadController@send');
-Route::get('/confirmdl', 'ConfirmController@download');
+Route::get('/', 'HomePageController@index')->name('home');
+Route::post('/', 'UploadController@send')->name('home');
+Route::get('/confirmup', 'ConfirmController@upload')->name('confirmup');
+Route::get('/download/{id_transfer}', 'DownloadController@send')->where('id_transfer', '[0-9]+');
+Route::get('/confirmdl/{id_transfer}', 'ConfirmController@download')->name('confirmdl')->where('id_transfer', '[0-9]+');
 

@@ -4,17 +4,25 @@
 	<meta charset="utf-8">
 	<title></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<main class="container">
 		<div class="row justify-content-between">
 			<div class="col-5" id="blocleft">
 				<div id="msgconfirmup" class="row justify-content-center">
-					<p>Votre fichier {{$transfer->file_name}} a bien été envoyé.</p>
+					<p>Voici votre fichier à télécharger.</p>
+				</div>
+				<div id="dest_message" class="row justify-content-center">
+					<p>Ici doit se trouver le message laissé par l'expéditeur qui devra être importé depuis la BDD.</p>
+				</div>
+				<div id="zonefilename" class="card">
+				  <div class="card-body">
+					nom du fichier à récupérer depuis la BDD
+				  </div>
 				</div>
 				<div class="row justify-content-center">
-					<a href="{{route('home')}}"><button id="btnagain" type="button" class="btn btn-dark">Envie d'envoyer<br>un autre fichier ?</button></a>
+					<button id="btndl" type="button" class="btn btn-dark">Télécharger</button>
 				</div>
 			</div>
 

@@ -10,7 +10,7 @@
     <main class="container">
         <div class="row justify-content-between">
             <div class="col-5" id="blocleft">
-                <form id="formupload" method="POST" action="{{ url('/') }}">
+                <form id="formupload" method="POST" action="{{ route('home') }}" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="row justify-content-center">
                         <input class="col-12" type="file" name="file_name">

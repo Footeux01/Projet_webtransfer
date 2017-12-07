@@ -12,22 +12,22 @@ class UploadController extends Controller
     //
     public function send(Request $request)
     {	
-        //Incription de la demande dans la database
-        $transfer = new Transfers($request->except('csrf_token'));
-        $transfer->save();
-        
-    	
-        //Enregistrement du fichier sélectionné
-        //$path = Storage::disk('upload')->store($request->file_name);
-        $path = $request->file_name->store('/', 'upload');
-        dd($path);
-    	
-        //Envoi du mail avec le lien vers le fichier
-    	
+        //Incription des champs du formulaire dans la database sauf "token" et "nom du fichier"
+        $transfer = new Transfers($request->except('csrf_token','file_name'));
 
-        //Test du retour des champs du formulaire (à virer)
-        return $request->input('file_name') . ' ' . $request->input('exp_mail') . ' ' . $request->input('dest_mail') . ' ' . $request->input('dest_message');
-    	   // return view('confirmup');
+        //Enregistrement le nom du fichier sélectionné
+        $fname = Storage::disk('upload')->put('', $request->file_name);
+
+        //Inscription du nom du fichier dans la database
+        $transfer->file_name = $fname;
+
+        //Enregistre les informations dans la database
+        $transfer->save();
+
+        //Envoi du mail avec le lien vers le fichier
+        
+        //return redirect()->route('confirmup',compact('transfer'));
+    	return view('confirmup', compact('transfer'));
 
     }
 }

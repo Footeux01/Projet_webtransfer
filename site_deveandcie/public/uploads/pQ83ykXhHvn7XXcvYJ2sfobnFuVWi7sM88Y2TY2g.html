@@ -4,18 +4,30 @@
 	<meta charset="utf-8">
 	<title></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<main class="container">
 		<div class="row justify-content-between">
 			<div class="col-5" id="blocleft">
-				<div id="msgconfirmup" class="row justify-content-center">
-					<p>Votre fichier {{$transfer->file_name}} a bien été envoyé.</p>
-				</div>
-				<div class="row justify-content-center">
-					<a href="{{route('home')}}"><button id="btnagain" type="button" class="btn btn-dark">Envie d'envoyer<br>un autre fichier ?</button></a>
-				</div>
+				<form id="formupload" method="post" action="">
+					<div class="row justify-content-center">
+						<input class="col-12" type="file" name="file_name">
+					</div>
+					<div class="row justify-content-center">
+						<input class="col-12" type="text" name="exp_mail" placeholder="email expéditeur">
+					</div>
+					<div class="row justify-content-center">
+						<input class="col-12" type="text" name="dest_mail" placeholder="email destinataire">
+					</div>
+					<div class="row justify-content-center">
+						<textarea class="col-12" name="dest_message" placeholder="Message"></textarea>
+					</div>
+					<div class="row justify-content-center">
+						<button id="btnup" type="button" class="btn btn-dark">Envoyer</button>
+					</div>
+
+				</form>
 			</div>
 
 			<div class="col-6" id="blocright">
