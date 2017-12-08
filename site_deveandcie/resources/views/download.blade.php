@@ -11,14 +11,14 @@
 		<div class="row justify-content-between">
 			<div class="col-5" id="blocleft">
 				<div id="msgconfirmup" class="row justify-content-center">
-					<p>Voici votre fichier à télécharger.</p>
+					<h4>Voici votre fichier à télécharger.</h4>
 				</div>
 				<div id="dest_message" class="row justify-content-center">
-					<p>Ici doit se trouver le message laissé par l'expéditeur qui devra être importé depuis la BDD : {{$transfer->dest_message}}</p>
+					<p><strong>Message :</strong> {{$transfer->dest_message}}</p>
 				</div>
 				<div id="zonefilename" class="card">
 				  <div class="card-body">
-					nom du fichier à récupérer depuis la BDD : {{$transfer->real_name}}
+					<strong>Fichier :</strong> {{$transfer->real_name}}
 				  </div>
 				</div>
 				<div class="row justify-content-center">
@@ -27,15 +27,16 @@
 			</div>
 
 			<div class="col-6" id="blocright">
-				<div class="row justify-content-center">
-					<img src="http://via.placeholder.com/150x150" id="logo">
-					<p>
-						Blabla de présentation du service.
-
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris felis nisi, porta eu augue vitae, scelerisque ultricies velit. Vestibulum eu vehicula ante, cursus accumsan tellus. Etiam ut neque venenatis, auctor est ac, molestie felis. Vivamus vitae lorem nulla. Aenean in fringilla risus. Fusce bibendum vitae massa vitae porttitor. Mauris fringilla tortor ac erat ullamcorper, a malesuada justo auctor. Aenean sit amet neque varius, malesuada mauris sit amet, malesuada nisi.
-					</p>
-				</div>
-			</div>
+                <div class="row justify-content-center">
+                    <figure>
+                        <img src="{{asset('img/logo.png')}}" id="logo" width="30%">
+                        <figcaption><h3>Deve &amp; Cie</h3></figcaption>
+                    </figure>
+                    <p>
+                        Nos vous proposons un service de transfert de fichier, sans connexion.
+                    </p>
+                </div>
+            </div>
 		</div>
 	</main>
 
