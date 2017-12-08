@@ -18,7 +18,7 @@
 				</div>
 				<div id="zonefilename" class="card">
 				  <div class="card-body">
-					nom du fichier à récupérer depuis la BDD : {{$transfer->file_name}}
+					nom du fichier à récupérer depuis la BDD : {{$transfer->real_name}}
 				  </div>
 				</div>
 				<div class="row justify-content-center">

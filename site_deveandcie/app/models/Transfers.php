@@ -10,7 +10,7 @@ class Transfers extends Model
     protected $table = 'transfers';
     protected $primaryKey = 'id_transfer'; 
     protected $fillable = [
-        'file_name', 'exp_mail', 'dest_mail', 'dest_message'
+        'real_name', 'file_name', 'exp_mail', 'dest_mail', 'dest_message'
     ];
 
 }

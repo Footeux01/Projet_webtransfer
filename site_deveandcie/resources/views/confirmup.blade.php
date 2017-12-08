@@ -11,7 +11,7 @@
 		<div class="row justify-content-between">
 			<div class="col-5" id="blocleft">
 				<div id="msgconfirmup" class="row justify-content-center">
-					<p>Votre fichier {{$transfer->file_name}} a bien été envoyé.</p>
+					<p>Votre fichier {{$transfer->real_name}} a bien été envoyé.</p>
 				</div>
 				<div class="row justify-content-center">
 					<a href="{{route('home')}}"><button id="btnagain" type="button" class="btn btn-dark">Envie d'envoyer<br>un autre fichier ?</button></a>
