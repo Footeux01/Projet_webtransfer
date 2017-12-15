@@ -11,7 +11,7 @@
 		<div class="row justify-content-between">
 			<div class="col-5" id="blocleft">
 				<div id="msgconfirmup" class="row justify-content-center">
-					<p>Votre fichier {{$transfer->file_name}} a bien été envoyé.</p>
+					<p>Votre fichier {{$transfer->real_name}} a bien été envoyé.</p>
 				</div>
 				<div class="row justify-content-center">
 					<a href="{{route('home')}}"><button id="btnagain" type="button" class="btn btn-dark">Envie d'envoyer<br>un autre fichier ?</button></a>
@@ -19,15 +19,16 @@
 			</div>
 
 			<div class="col-6" id="blocright">
-				<div class="row justify-content-center">
-					<img src="http://via.placeholder.com/150x150" id="logo">
-					<p>
-						Blabla de présentation du service.
-
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris felis nisi, porta eu augue vitae, scelerisque ultricies velit. Vestibulum eu vehicula ante, cursus accumsan tellus. Etiam ut neque venenatis, auctor est ac, molestie felis. Vivamus vitae lorem nulla. Aenean in fringilla risus. Fusce bibendum vitae massa vitae porttitor. Mauris fringilla tortor ac erat ullamcorper, a malesuada justo auctor. Aenean sit amet neque varius, malesuada mauris sit amet, malesuada nisi.
-					</p>
-				</div>
-			</div>
+                <div class="row justify-content-center">
+                    <figure>
+                        <img src="{{asset('img/logo.png')}}" id="logo" width="30%">
+                        <figcaption><h3>Deve &amp; Cie</h3></figcaption>
+                    </figure>
+                    <p>
+                        Nos vous proposons un service de transfert de fichier, sans connexion.
+                    </p>
+                </div>
+            </div>
 		</div>
 	</main>
 

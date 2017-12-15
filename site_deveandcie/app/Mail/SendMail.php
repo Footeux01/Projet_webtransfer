@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use App\models\Transfers;
 
 class SendMail extends Mailable
 {
@@ -15,19 +16,17 @@ class SendMail extends Mailable
      * Elements de contact
      * @var array
      */
-    public $contact;
-    public $realname; 
+    public $contact; 
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Array $contact,$realname)
+    public function __construct(Transfers $c)
     {
         //
-        $this->contact = $contact;
-        $this->realname = $realname;
+        $this->contact = $c;
     }
 
     /**
