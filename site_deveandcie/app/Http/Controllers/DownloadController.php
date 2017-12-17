@@ -8,14 +8,13 @@ use App\models\Transfers;
 class DownloadController extends Controller
 {
     //
-    public function send($id_transfer)
+    public function send($by_token)
     {	
     	//récupérer les infos dans la bdd à partir de l'id_transfer
-    	$transfer = Transfers::find($id_transfer);
-
+    	$transfer = Transfers::where('file_name',$by_token)->get()->first();
+    	
     	// affichage
     	return view('download',compact('transfer'));
-
 
     }
 }

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>Confirmation Download !</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
 </head>
@@ -11,10 +11,10 @@
 		<div class="row justify-content-between">
 			<div class="col-5" id="blocleft">
 				<div id="msgconfirmdl" class="row justify-content-center">
-					<p>Votre fichier a bien été téléchargé.</p>
+					<p>Votre fichier a bien été téléchargé depuis notre serveur.</p>
 				</div>
 				<div class="row justify-content-center">
-					<button id="btnagain" type="button" class="btn btn-dark">Envie d'envoyer<br>un autre fichier ?</button>
+					<button id="btnagain" type="button" class="btn btn-dark">Envie d'envoyer<br>un fichier ?</button>
 				</div>
 			</div>
 
@@ -24,9 +24,11 @@
                         <img src="{{asset('img/logo.png')}}" id="logo" width="30%">
                         <figcaption><h3>Deve &amp; Cie</h3></figcaption>
                     </figure>
+
                     <p>
-                        Nos vous proposons un service de transfert de fichier, sans connexion.
+                        Bonjour ! Nous vous proposons un service de transfert de fichier, sans connexion. Vous devez tout d'abord choisir un fichier à transférer, puis indiquer votre adresse email ainsi que celle de celui à qui vous souhaitez envoyer le fichier. Vous avez la possibilité de laisser un message au destinataire. Il suffit enfin de cliquer sur le bouton "envoyer" et nous nous occupons du reste.
                     </p>
+                    
                 </div>
             </div>
 		</div>

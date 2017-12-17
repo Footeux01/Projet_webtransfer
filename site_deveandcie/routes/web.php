@@ -14,6 +14,7 @@
 Route::get('/', 'HomePageController@index')->name('home');
 Route::post('/', 'UploadController@send')->name('home');
 Route::get('/confirmup', 'ConfirmController@upload')->name('confirmup');
-Route::get('/download/{id_transfer}', 'DownloadController@send')->name('download')->where('id_transfer', '[0-9]+');
+Route::get('/download/{by_token}', 'DownloadController@send')->name('download');
 Route::get('/confirmdl/{id_transfer}', 'ConfirmController@download')->name('confirmdl')->where('id_transfer', '[0-9]+');
+
 
